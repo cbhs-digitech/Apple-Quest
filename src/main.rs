@@ -39,7 +39,9 @@ fn get_answer() -> i32 {
 }
 
 fn rules() {
-    println!("The rules are that you answer in the number corrosponding to the answer");
+    println!("1. You are to answer in the number corrosponding to the answer you think is correct");
+    println!("2. All these questions are multichoice so you can choose which one and not make a massive paragraph");
+    println!("3. No cats");
 }
 
 fn quest_one() -> u32 {
@@ -65,6 +67,28 @@ fn quest_one() -> u32 {
     }
 }
 
+fn quest_two() -> u32 {
+    // Question
+    println!("Who was the founder and CEO of Apple Inc.");
+
+    // Selection of answers
+    println!("1. Jeff Bezos");
+    println!("2. Steve Jobs");
+    println!("3. Tim Cook");
+    println!("4. Sundar Pichai");
+
+    // Getting user's answer
+    let answer = get_answer();
+
+    // Seeing if user's answer is correct
+    if answer == 2 {
+        println!("Correct");
+        return 1;
+    } else {
+        println!("Incorrect");
+        return 0;
+    }
+}
 // Main function to welcome the user and start the loop
 fn main() {
     // Welcome message
@@ -88,6 +112,18 @@ fn main() {
     }
 
     println!("    ");
-    println!("Ok");
-    quest_one();
+    println!("Alright let the game begin!");
+    println!("    ");
+    let mut total_points = 0;
+
+    total_points = total_points + quest_one();
+    println!("    ");
+    total_points = total_points + quest_two();
+    println!("    ");
+
+    if total_points == 1 {
+        println!("You got {total_points} point");
+    } else {
+        println!("You got {total_points} points");
+    }
 }
