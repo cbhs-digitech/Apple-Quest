@@ -30,7 +30,7 @@ fn get_answer() -> i32 {
         };
 
         if !(line > 0) || !(line < 5) {
-            println!("Sorry that's not a valid answer");
+            println!("Sorry that's not a valid answer (The answers are from 1 to 4)");
             continue;
         }
 
@@ -46,7 +46,7 @@ fn rules() {
 
 fn quest_one() -> u32 {
     // Question
-    println!("When did apple first reveal the iPhone?");
+    println!("When did Apple first reveal the iPhone?");
 
     // Selection of answers
     println!("1. 1999");
