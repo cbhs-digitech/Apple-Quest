@@ -7,6 +7,7 @@ fn get_string() -> String {
     stdin().read_line(&mut line).expect("Failed to read line");
     // This function is to trim out the unwanted whitespace
     let line: String = line.trim().parse().unwrap();
+    // Return the value of line
     return line;
 }
 
@@ -29,19 +30,14 @@ fn get_answer() -> i32 {
             }
         };
 
-        if !(line > 0) || !(line < 5) {
+        // Checking if the answer is valid being between 0 and 5
+        if line <= 0 && line >= 5 {
             println!("Sorry that's not a valid answer (The answers are from 1 to 4)");
             continue;
         }
-
+        // Return the value of line
         return line;
     }
-}
-
-fn rules() {
-    println!("1. You are to answer in the number corrosponding to the answer you think is correct");
-    println!("2. All these questions are multichoice so you can choose which one and not make a massive paragraph");
-    println!("3. No cats");
 }
 
 fn quest_one() -> u32 {
@@ -60,10 +56,10 @@ fn quest_one() -> u32 {
     // Seeing if user's answer is correct
     if answer == 4 {
         println!("Correct");
-        return 1;
+        1
     } else {
         println!("Incorrect");
-        return 0;
+        0
     }
 }
 
@@ -83,14 +79,41 @@ fn quest_two() -> u32 {
     // Seeing if user's answer is correct
     if answer == 2 {
         println!("Correct");
-        return 1;
+        1
     } else {
         println!("Incorrect");
-        return 0;
+        0
     }
 }
+
+fn quest_three() -> u32 {
+    // Question
+    println!("When did Apple unveil the colourful Mac G4");
+
+    // Selection of answers
+    println!("1. 1999");
+    println!("2. 1993");
+    println!("3. 2002");
+    println!("4. 2001");
+
+    // Getting user's answer
+    let answer = get_answer();
+
+    // Seeing if user's answer is correct
+    if answer == 1 {
+        println!("Correct");
+        1
+    } else {
+        println!("Incorrect");
+        0
+    }
+}
+
 // Main function to welcome the user and start the loop
 fn main() {
+    // The total points at the end of the questionare
+    let mut total_points = 0;
+
     // Welcome message
     println!("Hello, and welcome to the Apple Inc. questionare");
     println!("    ");
@@ -99,28 +122,26 @@ fn main() {
     println!("Please input your name");
     // User input for name
     let usr_name = get_string();
-    // Printing user's name
     println!("Welcome, {usr_name}");
-
     println!("    ");
 
-    // Asking if the user wants to see the currently barely written rules
-    println!("Do you want to here the rules (Yes/No)");
-    let yes_or_no: String = get_string().to_ascii_lowercase();
-    if yes_or_no == "y".to_string() || yes_or_no == "yes".to_string() {
-        rules();
-    }
-
+    // Rules
+    println!("Here is the rule: ");
+    println!("You are to answer by the number corrosponding to the answer you think is correct");
     println!("    ");
+
+    // Questions
     println!("Alright let the game begin!");
     println!("    ");
-    let mut total_points = 0;
 
-    total_points = total_points + quest_one();
+    total_points += quest_one();
     println!("    ");
-    total_points = total_points + quest_two();
+    total_points += quest_two();
+    println!("    ");
+    total_points += quest_three();
     println!("    ");
 
+    // Grammatically correct total point show
     if total_points == 1 {
         println!("You got {total_points} point");
     } else {
