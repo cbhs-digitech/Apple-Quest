@@ -109,6 +109,52 @@ fn quest_three() -> u32 {
     }
 }
 
+fn quest_four() -> u32 {
+    // Question
+    println!("What was the previous CPU architecture that was used on Macs when Apple switched to Intel ");
+
+    // Selection of answers
+    println!("1. RISC-V");
+    println!("2. PowerPC");
+    println!("3. x86");
+    println!("4. ARM");
+
+    // Getting user's answer
+    let answer = get_answer();
+
+    // Seeing if user's answer is correct
+    if answer == 2 {
+        println!("Correct");
+        1
+    } else {
+        println!("Incorrect");
+        0
+    }
+}
+
+fn quest_five() -> u32 {
+    // Question
+    println!("When was the iPod nano brought into market as a successor to the iPod mini");
+
+    // Selection of answers
+    println!("1. 2007");
+    println!("2. 2006");
+    println!("3. 2005");
+    println!("4. 2004");
+
+    // Getting user's answer
+    let answer = get_answer();
+
+    // Seeing if user's answer is correct
+    if answer == 3 {
+        println!("Correct");
+        1
+    } else {
+        println!("Incorrect");
+        0
+    }
+}
+
 // Main function to welcome the user and start the loop
 fn main() {
     // The total points at the end of the questionare
@@ -140,10 +186,16 @@ fn main() {
     println!("    ");
     total_points += quest_three();
     println!("    ");
+    total_points += quest_four();
+    println!("    ");
+    total_points += quest_five();
+    println!("    ");
 
     // Grammatically correct total point show
     if total_points == 1 {
         println!("You got {total_points} point");
+    } else if total_points == 5 {
+        println!("Hey you got all {total_points} points");
     } else {
         println!("You got {total_points} points");
     }
