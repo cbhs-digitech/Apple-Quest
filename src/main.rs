@@ -157,18 +157,8 @@ fn quest_five() -> u32 {
 
 // Main function to welcome the user and start the loop
 fn main() {
-    // The total points at the end of the questionare
-    let mut total_points = 0;
-
     // Welcome message
     println!("Hello, and welcome to the Apple Inc. questionare");
-    println!("    ");
-
-    // User name
-    println!("Please input your name");
-    // User input for name
-    let usr_name = get_string();
-    println!("Welcome, {usr_name}");
     println!("    ");
 
     // Rules
@@ -176,27 +166,55 @@ fn main() {
     println!("You are to answer by the number corrosponding to the answer you think is correct");
     println!("    ");
 
-    // Questions
-    println!("Alright let the game begin!");
-    println!("    ");
+    // User name
+    println!("Please input your name");
+    // User input for name
+    let usr_name = get_string();
+    loop {
+        // The total points at the end of the questionare
+        let mut total_points = 0;
 
-    total_points += quest_one();
-    println!("    ");
-    total_points += quest_two();
-    println!("    ");
-    total_points += quest_three();
-    println!("    ");
-    total_points += quest_four();
-    println!("    ");
-    total_points += quest_five();
-    println!("    ");
+        // Printing out user's name
+        println!("Welcome, {usr_name}");
+        println!("    ");
 
-    // Grammatically correct total point show
-    if total_points == 1 {
-        println!("You got {total_points} point");
-    } else if total_points == 5 {
-        println!("Hey you got all {total_points} points");
-    } else {
-        println!("You got {total_points} points");
+        // Questions
+        println!("Alright let the game begin!");
+        println!("    ");
+
+        println!("Question 1");
+        total_points += quest_one();
+        println!("    ");
+        println!("Question 2");
+        total_points += quest_two();
+        println!("    ");
+        println!("Question 3");
+        total_points += quest_three();
+        println!("    ");
+        println!("Question 4");
+        total_points += quest_four();
+        println!("    ");
+        println!("Question 5");
+        total_points += quest_five();
+        println!("    ");
+
+        // Grammatically correct total point show
+        if total_points == 1 {
+            println!("You got {total_points} point");
+        } else if total_points == 5 {
+            println!("Hey you got all {total_points} points");
+        } else {
+            println!("You got {total_points} points");
+        }
+
+        // Asking user if they want to play it again
+        println!("Would you like to try again? (Yes/No)");
+        let contin = get_string().to_ascii_lowercase();
+        if !(contin == "y".to_owned()) && !(contin == "yes".to_owned()) {
+            println!("Goodbye");
+            break;
+        } else {
+            println!("   ");
+        }
     }
 }
