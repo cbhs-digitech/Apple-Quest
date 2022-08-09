@@ -162,7 +162,7 @@ fn main() {
     println!("Hello, and welcome to the Apple Inc. questionare");
     println!("    ");
 
-    let quest = rand::thread_rng().gen_range(1..5);
+    let quest = rand::thread_rng().gen_range(1..6);
     println!("{quest}");
 
     // Rules
@@ -173,7 +173,12 @@ fn main() {
     // User name
     println!("Please input your name");
     // User input for name
-    let usr_name = get_string();
+    let mut usr_name = get_string();
+    while usr_name == "" {
+        println!("Well I cant address nothing, try again");
+        usr_name = get_string();
+    }
+
     loop {
         // The total points at the end of the questionare
         let mut total_points = 0;
