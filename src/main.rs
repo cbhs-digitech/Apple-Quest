@@ -1,3 +1,4 @@
+use rand::Rng;
 use std::io::stdin;
 
 fn get_string() -> String {
@@ -160,6 +161,9 @@ fn main() {
     // Welcome message
     println!("Hello, and welcome to the Apple Inc. questionare");
     println!("    ");
+
+    let quest = rand::thread_rng().gen_range(1..5);
+    println!("{quest}");
 
     // Rules
     println!("Here is the rule: ");
