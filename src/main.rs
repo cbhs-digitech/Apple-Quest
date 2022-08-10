@@ -171,6 +171,8 @@ fn main() {
     println!("Please input your name");
     // User input for name
     let mut usr_name = get_string();
+
+    // Making sure the user's name is not blank
     while usr_name == "" {
         println!("Well I cant address nothing, try again");
         usr_name = get_string();
@@ -188,6 +190,7 @@ fn main() {
         println!("Alright let the game begin!");
         println!("    ");
 
+        // Making sure that the questions dont get repeated
         let mut quest_options = [false, false, false, false, false];
 
         // For the 5 questions in the list
