@@ -22,7 +22,7 @@ fn get_answer() -> i32 {
 
         // Seeing if the user input is an interger or not
         // This method of redeclaring a variable is called shadowing so you dont have a headache with names
-        let line = match line.trim().parse() {
+        let line: i32 = match line.trim().parse() {
             Ok(num) => num,
             Err(_) => {
                 println!("Sorry that's not a valid answer (Please use a number)");
