@@ -162,9 +162,6 @@ fn main() {
     println!("Hello, and welcome to the Apple Inc. questionare");
     println!("    ");
 
-    let quest = rand::thread_rng().gen_range(1..6);
-    println!("{quest}");
-
     // Rules
     println!("Here is the rule: ");
     println!("You are to answer by the number corrosponding to the answer you think is correct");
@@ -191,21 +188,51 @@ fn main() {
         println!("Alright let the game begin!");
         println!("    ");
 
-        println!("Question 1");
-        total_points += quest_one();
-        println!("    ");
-        println!("Question 2");
-        total_points += quest_two();
-        println!("    ");
-        println!("Question 3");
-        total_points += quest_three();
-        println!("    ");
-        println!("Question 4");
-        total_points += quest_four();
-        println!("    ");
-        println!("Question 5");
-        total_points += quest_five();
-        println!("    ");
+        let mut quest_options = [false, false, false, false, false];
+
+        // For the 5 questions in the list
+        for x in 0..5 {
+            // Choosing which question randomly
+            let mut choice = rand::thread_rng().gen_range(0..5);
+
+            // Seeing if we have done that question
+            while quest_options[choice] == true {
+                choice = rand::thread_rng().gen_range(0..5);
+            }
+
+            let y = x + 1;
+
+            // Question 1
+            if choice == 0 {
+                println!("Question {y}");
+                total_points += quest_one();
+                println!("    ");
+            // Question 2
+            } else if choice == 1 {
+                println!("Question {y}");
+                total_points += quest_two();
+                println!("    ");
+            // Question 3
+            } else if choice == 2 {
+                println!("Question {y}");
+                total_points += quest_three();
+                println!("    ");
+            // Question 4
+            } else if choice == 3 {
+                println!("Question {y}");
+                total_points += quest_four();
+                println!("    ");
+
+            // Question 5
+            } else if choice == 4 {
+                println!("Question {y}");
+                total_points += quest_five();
+                println!("    ");
+            } else {
+                println!("What the hell happened?");
+            }
+            quest_options[choice] = true;
+        }
 
         // Grammatically correct total point show
         if total_points == 1 {
