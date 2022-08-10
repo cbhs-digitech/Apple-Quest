@@ -32,7 +32,7 @@ fn get_answer() -> i32 {
         };
 
         // Checking if the answer is valid being between 0 and 5
-        if line <= 0 && line >= 5 {
+        if line <= 0 || line >= 5 {
             println!("Sorry that's not a valid answer (The answers are from 1 to 4)");
             continue;
         }
