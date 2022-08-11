@@ -9,7 +9,7 @@ fn get_string() -> String {
     // This function is to trim out the unwanted whitespace
     let line: String = line.trim().parse().unwrap();
     // Return the value of line
-    return line;
+    line
 }
 
 // Getting an integer input from the user
