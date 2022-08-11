@@ -199,7 +199,7 @@ fn main() {
             let mut choice = rand::thread_rng().gen_range(0..5);
 
             // Seeing if we have done that question
-            while quest_options[choice] == true {
+            while quest_options[choice] {
                 choice = rand::thread_rng().gen_range(0..5);
             }
 
@@ -249,7 +249,7 @@ fn main() {
         // Asking user if they want to play it again
         println!("Would you like to try again? (Yes/No)");
         let contin = get_string().to_ascii_lowercase();
-        if !(contin == "y".to_owned()) && !(contin == "yes".to_owned()) {
+        if contin != *"y" && contin != *"yes" {
             println!("Goodbye");
             break;
         } else {
