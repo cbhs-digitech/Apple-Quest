@@ -164,7 +164,7 @@ fn main() {
 
     // Rules
     println!("Here is the rule: ");
-    println!("You are to answer by the number corrosponding to the answer you think is correct");
+    println!("You are to input the number corrosponding to the answer you think is correct");
     println!("    ");
 
     // User name
@@ -173,7 +173,7 @@ fn main() {
     let mut usr_name = get_string();
 
     // Making sure the user's name is not blank
-    while usr_name == "" {
+    while usr_name == *"" {
         println!("Well I cant address nothing, try again");
         usr_name = get_string();
     }
