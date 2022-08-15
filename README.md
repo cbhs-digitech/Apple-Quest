@@ -10,6 +10,7 @@ After doing all the questions the program will show the user how many points the
 
 ## FAQ
 "Please tell us the answer to the question if we get it wrong" - Average tester
+
 To that I say no because it ruins the repeatability of the program
 
 ## My Trello Board (For Mr. Thawley)
