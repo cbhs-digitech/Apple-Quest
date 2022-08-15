@@ -179,6 +179,7 @@ fn main() {
 
     // User name
     println!("Please input your name");
+
     // User input for name
     let mut usr_name = get_string();
 
