@@ -41,6 +41,8 @@ fn get_answer() -> i32 {
     }
 }
 
+// Question 1 is the iconic 1st gen iPhone and it's reveal date
+// The correct answer is 4: 2007
 fn quest_one() -> u32 {
     // Question
     println!("When did Apple first reveal the iPhone?");
@@ -64,9 +66,11 @@ fn quest_one() -> u32 {
     }
 }
 
+// Question 2 is about the co-founder and CEO of Apple
+// The correct answer is 2: Steve Jobs
 fn quest_two() -> u32 {
     // Question
-    println!("Who was the founder and CEO of Apple Inc.");
+    println!("Who was the co-founder and CEO of Apple Inc.");
 
     // Selection of answers
     println!("1. Jeff Bezos");
@@ -87,9 +91,11 @@ fn quest_two() -> u32 {
     }
 }
 
+// Question 3 is about the release of the Mac G4
+// The correct answer is 1: 1999
 fn quest_three() -> u32 {
     // Question
-    println!("When did Apple unveil the colourful Mac G4");
+    println!("When did Apple unveil the colourful Mac G4 to the market");
 
     // Selection of answers
     println!("1. 1999");
@@ -110,9 +116,11 @@ fn quest_three() -> u32 {
     }
 }
 
+// Question 4 is about the initial CPU architecture that Apple used in their iMacs
+// The correct answer is 2: PowerPC
 fn quest_four() -> u32 {
     // Question
-    println!("What was the previous CPU architecture that was used on Macs when Apple switched to Intel ");
+    println!("What was the previous CPU architecture that was used on iMacs when Apple switched to Intel ");
 
     // Selection of answers
     println!("1. RISC-V");
@@ -133,6 +141,8 @@ fn quest_four() -> u32 {
     }
 }
 
+// Question 5 is about the release of the iPod nano release
+// The correct answer is 3: 2005
 fn quest_five() -> u32 {
     // Question
     println!("When was the iPod nano brought into market as a successor to the iPod mini");

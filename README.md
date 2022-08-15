@@ -8,5 +8,9 @@ This is a questionare game with the questions being about Apple Computers. This 
 The user will answer from 1-4 on which they think is the right answer. 
 After doing all the questions the program will show the user how many points they got.
 
+## FAQ
+"Please tell us the answer to the question if we get it wrong" - Average tester
+To that I say no because it ruins the repeatability of the program
+
 ## My Trello Board (For Mr. Thawley)
 https://trello.com/b/58ITzWkQ/ncea-as91883-assessment
