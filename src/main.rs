@@ -42,9 +42,9 @@ fn get_answer() -> i32 {
     }
 }
 
-// Question 1 is the iconic 1st gen iPhone and it's reveal date
+// This question is the iconic 1st gen iPhone and it's reveal date
 // The correct answer is 4: 2007
-fn quest_one() -> u32 {
+fn quest_iphone() -> u32 {
     // Question
     println!("When did Apple first reveal the iPhone?");
 
@@ -67,9 +67,9 @@ fn quest_one() -> u32 {
     }
 }
 
-// Question 2 is about the co-founder and CEO of Apple
+// This question is about the co-founder and CEO of Apple
 // The correct answer is 2: Steve Jobs
-fn quest_two() -> u32 {
+fn quest_steve() -> u32 {
     // Question
     println!("Who was the co-founder and CEO of Apple Inc.");
 
@@ -92,9 +92,9 @@ fn quest_two() -> u32 {
     }
 }
 
-// Question 3 is about the release of the Mac G4
+// This question is about the release of the Mac G4
 // The correct answer is 1: 1999
-fn quest_three() -> u32 {
+fn quest_g4() -> u32 {
     // Question
     println!("When did Apple unveil the colourful Mac G4 to the market");
 
@@ -117,9 +117,9 @@ fn quest_three() -> u32 {
     }
 }
 
-// Question 4 is about the initial CPU architecture that Apple used in their iMacs
+// This question is about the initial CPU architecture that Apple used in their iMacs
 // The correct answer is 2: PowerPC
-fn quest_four() -> u32 {
+fn quest_powerpc() -> u32 {
     // Question
     println!("What was the previous CPU architecture that was used on iMacs when Apple switched to Intel ");
 
@@ -142,9 +142,9 @@ fn quest_four() -> u32 {
     }
 }
 
-// Question 5 is about the release of the iPod nano release
+// This question is about the release of the iPod nano release
 // The correct answer is 3: 2005
-fn quest_five() -> u32 {
+fn quest_nano() -> u32 {
     // Question
     println!("When was the iPod nano brought into market as a successor to the iPod mini");
 
@@ -205,7 +205,7 @@ fn main() {
         // Making sure that the questions dont get repeated
         let mut quest_options = [false, false, false, false, false];
 
-        // For the 5 questions in the list
+        // Looping the 5 questions in the list
         for x in 0..5 {
             // Choosing which question randomly
             let mut choice = rand::thread_rng().gen_range(0..5);
@@ -215,35 +215,37 @@ fn main() {
                 choice = rand::thread_rng().gen_range(0..5);
             }
 
+            // Indexing the questions correctly
             let y = x + 1;
 
             // Question 1
             if choice == 0 {
                 println!("Question {y}");
-                total_points += quest_one();
+                total_points += quest_iphone();
                 println!("    ");
-            // Question 2
+            // Steve Jobs question
             } else if choice == 1 {
                 println!("Question {y}");
-                total_points += quest_two();
+                total_points += quest_steve();
                 println!("    ");
-            // Question 3
+            // iMac G4 question
             } else if choice == 2 {
                 println!("Question {y}");
-                total_points += quest_three();
+                total_points += quest_g4();
                 println!("    ");
-            // Question 4
+            // PowerPC Question
             } else if choice == 3 {
                 println!("Question {y}");
-                total_points += quest_four();
+                total_points += quest_powerpc();
                 println!("    ");
 
-            // Question 5
+            // Nano question
             } else if choice == 4 {
                 println!("Question {y}");
-                total_points += quest_five();
+                total_points += quest_nano();
                 println!("    ");
             } else {
+                // Incase something horribly wrong happens
                 println!("What the hell happened?");
             }
             quest_options[choice] = true;
