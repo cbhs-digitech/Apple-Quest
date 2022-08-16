@@ -1,6 +1,7 @@
 use rand::Rng;
 use std::io::stdin;
 
+// Getting a string from the user
 fn get_string() -> String {
     // Varable to store input
     let mut line = String::new();
@@ -25,7 +26,7 @@ fn get_answer() -> i32 {
         let line: i32 = match line.trim().parse() {
             Ok(num) => num,
             Err(_) => {
-                println!("Sorry that's not a valid answer (Please use a number)");
+                println!("Sorry that's not a valid answer (Please use a whole number)");
                 // The continue is here to tell the loop to skip all the other commands and do it again
                 continue;
             }
