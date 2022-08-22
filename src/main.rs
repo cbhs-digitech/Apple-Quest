@@ -256,7 +256,7 @@ fn main() {
         if total_points == 1 {
             println!("You got {total_points} point");
         } else if total_points == 5 {
-            println!("Hey you got all {total_points} points");
+            println!("Hey you got all {total_points} points, Here's an Apple");
         } else {
             println!("You got {total_points} points");
         }

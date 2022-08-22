@@ -1,4 +1,4 @@
-# My NCEA Programming Assessment
+# Apple-Quest (My NCEA Programming Assessment)
 
 This program was supposed to be made in python but I like rust the programming language not the game
 
