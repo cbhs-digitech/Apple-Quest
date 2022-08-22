@@ -174,8 +174,9 @@ fn main() {
     println!("    ");
 
     // Rules
-    println!("Here is the rule: ");
+    println!("Here are the rules: ");
     println!("You are to input the number corrosponding to the answer you think is correct");
+    println!("For each question you get right 1 point will be added to your score");
     println!("    ");
 
     // User name
