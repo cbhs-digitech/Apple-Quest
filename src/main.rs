@@ -219,51 +219,50 @@ fn main() {
             // Indexing the questions correctly
             let y = x + 1;
 
-            // Question 1
+            // Question iPhone
             if choice == 0 {
                 println!("Question {y}");
                 total_points += quest_iphone();
-                println!("    ");
             // Steve Jobs question
             } else if choice == 1 {
                 println!("Question {y}");
                 total_points += quest_steve();
-                println!("    ");
             // iMac G4 question
             } else if choice == 2 {
                 println!("Question {y}");
                 total_points += quest_g4();
-                println!("    ");
             // PowerPC Question
             } else if choice == 3 {
                 println!("Question {y}");
                 total_points += quest_powerpc();
-                println!("    ");
-
             // Nano question
             } else if choice == 4 {
                 println!("Question {y}");
                 total_points += quest_nano();
-                println!("    ");
-            } else {
-                // Incase something horribly wrong happens
-                println!("What the hell happened?");
             }
             quest_options[choice] = true;
+            println!("    ");
         }
 
         // Grammatically correct total point show
         if total_points == 1 {
             println!("You got {total_points} point");
         } else if total_points == 5 {
-            println!("Hey you got all {total_points} points, Here's an Apple");
+            println!("Hey you got all {total_points} points");
         } else {
             println!("You got {total_points} points");
         }
 
         // Asking user if they want to play it again
         println!("Would you like to try again? (Yes/No)");
-        let contin = get_string().to_ascii_lowercase();
+        let mut contin = get_string().to_ascii_lowercase();
+
+        // Ask the user again if they don't type in y or n, yes or no
+        while contin != *"n" && contin != *"no" && contin != "y" && contin != "yes" {
+            println!("I don't understand what you just typed please try again");
+            contin = get_string().to_ascii_lowercase();
+        }
+
         if contin != *"y" && contin != *"yes" {
             println!("Goodbye");
             break;
