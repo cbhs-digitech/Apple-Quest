@@ -3,10 +3,13 @@
 This program was supposed to be made in python but I like rust (the programming language not the game)
 
 ## About
-This is a questionare game with the questions being about Apple Computers. This questionare will consist of 5 multichoice questions about Apple.
+This is a questionare game with the questions being about Apple Inc.
+This questionare will consist of 5 multichoice questions about Apple.
 
 The user will answer from 1-4 on which they think is the right answer. 
-After doing all the questions the program will show the user how many points they got.
+After doing all the questions the program will show the user how many points they got in total.
+
+The user is also prompted at the end if they want to play again.
 
 ## Installing and Playing
 
@@ -14,14 +17,14 @@ First [install rust](https://www.rust-lang.org/tools/install) if you dont have i
 
 Clone the repository
 ```
-git clone https://github.com/cbhs-digitech/as91883---programming-assessment-Dwogo.git
+git clone https://github.com/cbhs-digitech/Apple-Quest.git
 ```
 
 Enter the repository and enter this
 ```
 cargo run
 ```
-to run the questionare
+To run the questionare
 
 Have fun with it for 5 minutes
 

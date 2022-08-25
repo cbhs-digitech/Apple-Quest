@@ -27,7 +27,7 @@ fn get_answer() -> i32 {
             Ok(num) => num,
             Err(_) => {
                 println!("Sorry that's not a valid answer (Please use a whole number)");
-                // The continue is here to tell the loop to skip all the other commands and do it again
+                // The continue is here to tell the loop to skip all the other commands and do the function again
                 continue;
             }
         };
@@ -175,13 +175,12 @@ fn main() {
 
     // Rules
     println!("Here are the rules: ");
-    println!("You are to input the number corrosponding to the answer you think is correct");
-    println!("For each question you get right 1 point will be added to your score");
+    println!("1) You are to input the number corrosponding to the answer you think is correct");
+    println!("2) For each question you get right 1 point will be added to your score");
     println!("    ");
 
     // User name
     println!("Please input your name");
-
     // User input for name
     let mut usr_name = get_string();
 
@@ -196,12 +195,10 @@ fn main() {
         let mut total_points = 0;
 
         // Printing out user's name
-        println!("Welcome, {usr_name}");
-        println!("    ");
+        println!("Welcome, {usr_name} \n");
 
         // Questions
-        println!("Alright let the game begin!");
-        println!("    ");
+        println!("Alright let the game begin! \n");
 
         // Making sure that the questions dont get repeated
         let mut quest_options = [false, false, false, false, false];
